@@ -1,15 +1,14 @@
-# الواقع TV
+# حول المشروع
 
 #                         📺 **الواقع TV** 📰
 
 > نصنع إعلامنا بأنفسنا.
 
-## Dev-insta: [@outuo_](https://www.instagram.com/outuo_)
+## Youtube: [@Alwaki3-tv](https://www.youtube.com/@alwaki3-tv)
+## Facebook: [@قناة الواقع](https://www.facebook.com/profile.php?id=100079260563229)
+## Instagram: [@alwaki3dz](https://www.instagram.com/alwaki3dz)
+## TikTok: [@alwaki3dz](https://www.tiktok.com/@alwaki3dz)
 
-![GitHub followers](https://img.shields.io/github/followers/your-username?label=Follow&style=social)
-![GitHub stars](https://img.shields.io/github/stars/your-username/your-repo?style=social)
-![GitHub forks](https://img.shields.io/github/forks/your-username/your-repo?style=social)
-![GitHub license](https://img.shields.io/github/license/your-username/your-repo)
 
 ---
 
@@ -25,14 +24,8 @@
 
 ---
 
-## ⚙️ كيفية التثبيت والاستخدام
+## ⚙️ تم التطوير من طرف أسامة
 
-```bash
-# Clone the repository
-git clone https://github.com/your-username/al-waki3-tv.git
+تواصلوا معنا لإنشاء موقعكم الخاص بكل سلاسة و إحترافية
+## Dev-insta: [@outuo_](https://www.instagram.com/outuo_)
 
-# Install dependencies
-npm install
-
-# Run the application
-npm start
