@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>الواقع اونلاين</title>
+    <link rel="shortcut icon" href="./imgweb/icon.svg" type="image/png">
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* لون خلفية الصفحة */
+            overflow: hidden; /* إخفاء الـ scroll */
+        }
+
+        .content-wrapper {
+            text-align: right;
+            background-color: #fff; /* لون خلفية المحتوى */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ظل للمحتوى */
+            max-width: 800px; /* عرض أقصى للمحتوى */
+            min-width: 500px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: -20px; /* تباعد من الأعلى */
+            display: flex;
+            flex-direction: column;
+            align-items: normal;
+            direction: rtl;
+        }
+
+        .article-content {
+            display: block; /* عرض محتوى المقال بشكل افتراضي */
+        }
+
+        .news-cards {
+            display: none; /* إخفاء بطاقات الأخبار بشكل افتراضي */
+        }
+
+        #title-banner, #publish-banner {
+            display: none; /* إخفاء بنرات العناوين بشكل افتراضي */
+        }
+
+        header {
+            background-color: #fff;
+            width: 100%;
+            height: 70px; /* ارتفاع ثابت للهيدر */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* تقليص الحواف لتجنب تكبير header */
+        }
+        .logo {
+            margin-right: 20px; /* تعيين هامش من اليمين للفصل بين الشعار وقائمة التنقل */
+            height: 100%; /* ضبط ارتفاع الشعار بنسبة للهيدر */
+            display: flex;
+            align-items: center;
+        }     
+        .logo img {
+            max-height: 200px; /* ارتفاع الصورة يمتد بالكامل داخل الشعار */
+            width: auto; /* العرض يتغير تلقائيًا مع الارتفاع */
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+        }
+        .navigation a {
+            display: flex;
+            align-items: center; /* توسيط عناصر القائمة عموديًا */
+            color: #000;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 500;
+            padding: 10px;
+            margin: 0px 10px;
+            transition: all 0.3s ease; /* انتقال */
+        }
+        .navigation a img {
+            max-height: 100px; /* ارتفاع الصورة داخل عنصر القائمة */
+            width: auto; /* العرض يتغير تلقائيًا مع الارتفاع */
+            margin-right: 5px; /* تباعد بين الصور والنص */
+        }
+        .navigation a:hover {
+            color: #333;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: none; /* إزالة الظل عند التحويل */
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo"><img src="imgweb/logo.svg"></a>    
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>    
+        <nav class="navigation" id="nav-menu">
+          <a href="index.html#about"><img src="imgweb/من نحن.svg"></a>
+          <a href="index.html#pub"><img src="imgweb/اعلانات.png"></a>
+          <a href="index.html#news"><img src="imgweb/الاخبار.svg"></a>
+        </nav>
+    </header>
+
+<div class="content-wrapper">
+    <section class="news-cards" id="news">
+        <!-- لا تحتوي على أي بطاقات حالياً -->
+    </section>
+
+    <div id="article-content" class="article-content">
+        <!-- هنا سيتم تحديث محتوى المقال -->
+    </div>
+</div>
+
+<script src="slide.js"></script>
+
+<script>
+window.onload = function() {
+    const articleContent = document.getElementById('article-content');
+    const urlParams = new URLSearchParams(window.location.search);
+    const articleUrl = urlParams.get('url');
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', decodeURIComponent(articleUrl), true); // فك تشفير المعاملات في URL
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            articleContent.innerHTML = xhr.responseText;
+            // بمجرد أن يتم تحميل المقال، قم بإخفاء بطاقات الأخبار
+            document.querySelector('.news-cards').style.display = 'none';
+            // كما تم إضافة خاصية display: none; لـ #title-banner و #publish-banner
+            document.getElementById('title-banner').style.display = 'none';
+            document.getElementById('publish-banner').style.display = 'none';
+        }
+    };
+    xhr.send();
+};
+</script>
+
+</body>
+</html>
