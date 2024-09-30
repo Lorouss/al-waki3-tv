@@ -1,0 +1,6 @@
+->for header website
+.350 x 75 pixels
+
+->for icon website
+.32 x 32 pixels
+
