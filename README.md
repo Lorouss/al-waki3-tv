@@ -21,8 +21,7 @@
 
 ## 📸 لقطات من المشروع
 
-![لقطة شاشة 1](https://dummyimage.com/800x400/000/fff&text=لقطة+شاشة+1)
-![لقطة شاشة 2](https://dummyimage.com/800x400/000/fff&text=لقطة+شاشة+2)
+![الواقع TV Logo](https://github.com/username/repository-name/blob/main/الملفات%20المستخدمة/folder%20logo/al%20waki3.png)
 
 ---
 
