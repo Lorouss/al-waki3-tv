@@ -21,7 +21,7 @@
 
 ## 📸 لقطات من المشروع
 
-![الواقع TV Logo](https://github.com/username/repository-name/blob/main/الملفات%20المستخدمة/folder%20logo/al%20waki3.png)
+![الواقع TV Logo](https://github.com/Lorouss/al-waki3-tv/blob/main/%D8%A7%D9%84%D9%85%D9%84%D9%81%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D8%AE%D8%AF%D9%85%D8%A9/folder%20logo/al%20waki3.png?raw=true)
 
 ---
 
